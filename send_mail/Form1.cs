@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Net;
 using System.Net.Mail;
+using System.Net.NetworkInformation;
 using System.Windows.Forms;
 
 namespace send_mail
@@ -66,22 +67,22 @@ namespace send_mail
 
         public static bool verificarConexion()
         {
-            Uri Url = new System.Uri("http://www.microsoft.com");
+            Uri Url = new Uri("http://www.microsoft.com");
 
-            WebRequest WebReq;
-            WebResponse Resp;
-            WebReq = WebRequest.Create(Url);
+            WebRequest lSolicitud;
+            WebResponse lRespuesta;
+            lSolicitud = WebRequest.Create(Url);
 
             try
             {
-                Resp = WebReq.GetResponse();
-                Resp.Close();
-                WebReq = null;
+                lRespuesta = lSolicitud.GetResponse();
+                lRespuesta.Close();
+                lSolicitud = null;
                 return true;
             }
             catch
             {
-                WebReq = null;
+                lSolicitud = null;
                 return false;
             }
         }
@@ -90,9 +91,28 @@ namespace send_mail
         {
             try
             {
-                using (var client = new WebClient())
-                using (client.OpenRead("http://google.com/generate_204"))
+                using (var lClienteWeb = new WebClient())
+                using (lClienteWeb.OpenRead("http://google.com/generate_204"))
                     return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public static bool verificarConexion3()
+        {
+            
+            try
+            {
+                string Url = "www.google.com";
+                
+                Ping ping = new Ping();
+
+                PingReply respuesta = ping.Send(Url, 3000);
+
+                return (respuesta.Status == IPStatus.Success);
             }
             catch
             {
@@ -122,7 +142,7 @@ namespace send_mail
 
         private void btnEnviar_Click(object sender, EventArgs e)
         {
-            if (verificarConexion2())
+            if (verificarConexion3())
             {
                 string lCorreoOrigen = txtOrigen.Text.Trim();
                 string lContrasenaOrigen = txtPassword.Text.Trim();
