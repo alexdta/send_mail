@@ -103,11 +103,11 @@ namespace send_mail
 
         public static bool verificarConexion3()
         {
-            
+
             try
             {
                 string Url = "www.google.com";
-                
+
                 Ping ping = new Ping();
 
                 PingReply respuesta = ping.Send(Url, 3000);
@@ -154,23 +154,29 @@ namespace send_mail
                 string lMensaje = txtMensaje.Text;
                 bool lHtml = chkHtml.Checked;
 
-                enviarMail(
-                    lCorreoOrigen,
-                    lContrasenaOrigen,
-                    lServSMTP,
-                    lPuertoSMPT,
-                    lCorreoDestino,
-                    lAsunto,
-                    lAdjunto,
-                    lMensaje,
-                    lHtml);
+
+                Action act = () =>
+                {
+                    enviarMail(
+                        lCorreoOrigen,
+                        lContrasenaOrigen,
+                        lServSMTP,
+                        lPuertoSMPT,
+                        lCorreoDestino,
+                        lAsunto,
+                        lAdjunto,
+                        lMensaje,
+                        lHtml);
+                };
+
+                waitForm enviar = new waitForm(act, "Enviando Correo Electrónico . . . ");
+                enviar.ShowDialog();
+
             }
             else
             {
                 MessageBox.Show("No hay conexión a internet\nNo se puede enviar el correo", "Atención");
             }
-
-
         }
 
         #endregion

@@ -58,7 +58,7 @@
             this.btnEnviar.Location = new System.Drawing.Point(127, 586);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(75, 23);
-            this.btnEnviar.TabIndex = 0;
+            this.btnEnviar.TabIndex = 10;
             this.btnEnviar.Text = "Enviar";
             this.btnEnviar.UseVisualStyleBackColor = true;
             this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
@@ -77,7 +77,7 @@
             this.txtOrigen.Location = new System.Drawing.Point(127, 20);
             this.txtOrigen.Name = "txtOrigen";
             this.txtOrigen.Size = new System.Drawing.Size(306, 22);
-            this.txtOrigen.TabIndex = 2;
+            this.txtOrigen.TabIndex = 0;
             this.txtOrigen.Text = "<user>@gmail.com";
             // 
             // txtDestino
@@ -102,7 +102,7 @@
             this.txtServidor.Location = new System.Drawing.Point(127, 100);
             this.txtServidor.Name = "txtServidor";
             this.txtServidor.Size = new System.Drawing.Size(306, 22);
-            this.txtServidor.TabIndex = 8;
+            this.txtServidor.TabIndex = 2;
             this.txtServidor.Text = "smtp.gmail.com";
             this.toolTip.SetToolTip(this.txtServidor, "cambiar según el servidor de correo");
             // 
@@ -120,7 +120,7 @@
             this.txtPassword.Location = new System.Drawing.Point(127, 59);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(306, 22);
-            this.txtPassword.TabIndex = 6;
+            this.txtPassword.TabIndex = 1;
             this.txtPassword.Text = "<password>";
             // 
             // label4
@@ -151,7 +151,7 @@
             0});
             this.txtPuerto.Name = "txtPuerto";
             this.txtPuerto.Size = new System.Drawing.Size(120, 22);
-            this.txtPuerto.TabIndex = 10;
+            this.txtPuerto.TabIndex = 3;
             this.toolTip.SetToolTip(this.txtPuerto, "Posibles Puertos\r\n25\r\n587\r\n2525");
             this.txtPuerto.Value = new decimal(new int[] {
             587,
@@ -164,7 +164,7 @@
             this.txtAsunto.Location = new System.Drawing.Point(127, 228);
             this.txtAsunto.Name = "txtAsunto";
             this.txtAsunto.Size = new System.Drawing.Size(306, 22);
-            this.txtAsunto.TabIndex = 12;
+            this.txtAsunto.TabIndex = 5;
             this.txtAsunto.Text = "Correo de Prueba";
             // 
             // label6
@@ -182,7 +182,7 @@
             this.txtAdjunto.Location = new System.Drawing.Point(127, 274);
             this.txtAdjunto.Name = "txtAdjunto";
             this.txtAdjunto.Size = new System.Drawing.Size(306, 22);
-            this.txtAdjunto.TabIndex = 14;
+            this.txtAdjunto.TabIndex = 6;
             // 
             // label7
             // 
@@ -198,7 +198,7 @@
             this.btnAdjunto.Location = new System.Drawing.Point(439, 273);
             this.btnAdjunto.Name = "btnAdjunto";
             this.btnAdjunto.Size = new System.Drawing.Size(75, 23);
-            this.btnAdjunto.TabIndex = 15;
+            this.btnAdjunto.TabIndex = 7;
             this.btnAdjunto.Text = "Archivo";
             this.btnAdjunto.UseVisualStyleBackColor = true;
             this.btnAdjunto.Click += new System.EventHandler(this.btnAdjunto_Click);
@@ -209,7 +209,7 @@
             this.txtMensaje.Multiline = true;
             this.txtMensaje.Name = "txtMensaje";
             this.txtMensaje.Size = new System.Drawing.Size(306, 199);
-            this.txtMensaje.TabIndex = 17;
+            this.txtMensaje.TabIndex = 8;
             this.txtMensaje.Text = resources.GetString("txtMensaje.Text");
             // 
             // label8
@@ -230,7 +230,7 @@
             this.chkHtml.Location = new System.Drawing.Point(127, 536);
             this.chkHtml.Name = "chkHtml";
             this.chkHtml.Size = new System.Drawing.Size(183, 21);
-            this.chkHtml.TabIndex = 18;
+            this.chkHtml.TabIndex = 9;
             this.chkHtml.Text = "Mensaje en HTML Si/No";
             this.chkHtml.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.chkHtml.UseVisualStyleBackColor = true;

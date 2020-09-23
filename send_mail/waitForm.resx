@@ -117,16 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="toolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="txtMensaje.Text" xml:space="preserve">
-    <value>&lt;html&gt;
-&lt;body&gt;
-&lt;p&gt;&lt;b&gt;Estimado pepito&lt;/b&gt;,&lt;/p&gt;
-&lt;p&gt;Se adjunta al presente correo el archivo en formato PDF del servicio solicitado el día: 2020-02-29&lt;/p&gt;
-&lt;p&gt;Servicio Procesado por: &lt;br&gt;Anita La Huerfanita&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt; </value>
-  </data>
 </root>
